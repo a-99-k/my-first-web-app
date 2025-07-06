@@ -1,0 +1,171 @@
+/* ブラウザで設定されているスタイルのリセット・共通設定 */
+/* 消さないでください */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+form,
+input,
+textarea,
+select,
+button {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+/* スタイルのリセット終了 */
+
+/* 全体レイアウト */
+.wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+/* サイドバー */
+aside {
+  width: 220px; /* スリムな幅に */
+  background-color: #f0f0f0;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar {
+  padding: 24px;
+  height: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.logo span {
+  font-size: 1.5rem;
+  color: #4f7cac;
+}
+.logo h1 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  color: #555;
+  cursor: pointer;
+  transition: background-color 0.2s, padding-left 0.2s;
+}
+.menu li:hover {
+  background-color: #dbe9f4;
+  padding-left: 16px;
+}
+.menu li span {
+  font-size: 1.2rem;
+  color: #4f7cac;
+}
+
+/* メインコンテンツ */
+main {
+  flex: 1;
+  background-color: #fff;
+  padding: 16px;
+}
+
+.content-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-header {
+  background-color: #ffffff;
+  padding: 32px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: center;
+}
+.profile-circle {
+  width: 96px;
+  height: 96px;
+  background-color: #4f7cac;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+.profile-circle span {
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.section-subtitle {
+  color: #666;
+}
+
+/* 本文 */
+.section-body {
+  padding: 24px;
+}
+.section-description p {
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+/* 機能カードエリア */
+.feature-section {
+  display: flex;
+  gap: 24px;
+  margin-top: 32px;
+  justify-content: center;
+}
+.feature-card {
+  flex: 1;
+  background-color: #f7f9fc;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+.feature-card span {
+  font-size: 2rem;
+  color: #4f7cac;
+  display: block;
+  margin-bottom: 12px;
+}
+.feature-card h2 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* スマホ画面用　*/
+@media (max-width: 768px) {
+  .feature-section {
+    flex-direction: column;
+  }
+
+  .feature-card {
+    width: 100%;
+  }
+
+  .content-section {
+    padding: 0 16px;
+  }
+}
